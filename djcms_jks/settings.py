@@ -24,7 +24,7 @@ CORS_ORIGIN_ALLOW_ALL = True
 CMS_CONFIRM_VERSION4 = True
 
 # Application definition
-ROOT_URLCONF = 'djcms_jks.urls'
+ROOT_URLCONF = 'jkc.urls'
 WSGI_APPLICATION = 'jkc.wsgi.application'
 
 # Password validation
