@@ -1,0 +1,23 @@
+{% extends "bootstrap5/base.html" %}
+{% load cms_tags menu_tags sekizai_tags %}
+{% block bottom_css %}
+<!-- block bottom_css -->
+{{ block.super }}
+<style>
+body {
+    /*background-color: #FFDFD3;*/
+    background-image: url(/media/filer_public/05/68/0568de77-f6dd-4cb9-85c9-32f22c769a0a/img_6941.jpeg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+nav {
+   opacity: 0.5;
+}
+
+h1, h2, h3, h4, p {
+    color: #fff;
+}
+
+</style>
+{% endblock %}

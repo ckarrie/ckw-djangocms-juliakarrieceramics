@@ -1,0 +1,57 @@
+{% extends "bootstrap5/base.html" %}
+{% load cms_tags menu_tags sekizai_tags %}
+
+{% block navbar %}
+    {% comment %}
+    <nav class="navbar {% block navbar_options %}navbar-expand-lg navbar-dark bg-dark{% endblock %}">
+        <div class="container">
+            <a class="navbar-brand" href="/">{% block brand %}{% endblock %}</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="nav>
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">{% block menubar %}{% show_menu 0 100 100 100 'bootstrap5/menu.html' %}{% endblock>
+                {% block searchbar %}{% endblock %}
+            </div>
+        </div>
+    </nav>
+    {% endcomment %}
+{% endblock %}
+
+{% block content %}
+<section>
+   {% placeholder "Page Content" %}
+</section>
+{% endblock content %}
+
+
+
+{% block bottom_css %}
+<!-- block bottom_css -->
+{{ block.super }}
+<style>
+body {
+    /*background-color: #FFDFD3;*/ 
+    background-image: url(/media/filer_public/05/68/0568de77-f6dd-4cb9-85c9-32f22c769a0a/img_6941.jpeg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+nav { 
+   opacity: 0.5;
+}
+
+h1, h2, h3, h4, p {
+    color: #fff;
+}
+
+section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  min-height: 100vh;
+}
+
+</style>
+{% endblock %}

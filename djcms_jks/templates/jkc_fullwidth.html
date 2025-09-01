@@ -1,0 +1,9 @@
+{% extends "jkc_base.html" %}
+{% load cms_tags %}
+
+{% block title %}custom={% page_attribute "page_title" %}{% endblock title %}
+
+{% block content %}
+        {% placeholder "content" %}
+{% endblock content %}
+

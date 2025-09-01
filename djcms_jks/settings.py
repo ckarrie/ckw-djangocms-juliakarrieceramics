@@ -196,11 +196,14 @@ CMS_LANGUAGES = {
 
 CMS_TEMPLATES = (
     ## Customize this
-    #('jkc.html', 'JKC'),
-    ('fullwidth.html', 'Fullwidth'),
+    ('jkc_fullwidth.html', 'JKC Fullwidth'),
+    ('jkc_4_quadrate.html', 'JKC 4 Quadrate'),
+    ('fullwidth.html', 'Bootstrap Fullwidth'),
     #('sidebar_left.html', 'Sidebar Left'),
     #('sidebar_right.html', 'Sidebar Right')
 )
+
+DJANGOCMS_PICTURE_RESPONSIVE_IMAGES = True
 
 X_FRAME_OPTIONS = 'SAMEORIGIN'
 
