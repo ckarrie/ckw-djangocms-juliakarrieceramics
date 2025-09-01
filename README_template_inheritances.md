@@ -4,12 +4,12 @@
 - CSS: bootstrap@5.3.2 (via CDN)
 - JS: bootstrap@5.3.2 (via CDN)
 
-## jkc_base.html
+## Overview
 
 `src/...jkc/templates/`
 
-- `djangocms_frontend/templates/djangocms_frontend.html`
-	- `djangocms_frontend/templates/bootstrap5/base.html`
+- `djangocms_frontend/templates/djangocms_frontend.html` [details](#djangocms_frontend-djangocms_frontendhtml)
+	- `djangocms_frontend/templates/bootstrap5/base.html` [details](#djangocms_frontend-bootstrap5basehtml)
 		- `djcms_jks/templates/jkc_base.html`
 			- `djcms_jks/templates/jkc_fullwidth.html`
 		- `djcms_jks/templates/jkc_4_quadrate.html`
