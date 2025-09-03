@@ -1,0 +1,59 @@
+{% extends "jkc_base.html" %}
+{% load cms_tags %}
+
+{% block navbar %}{% endblock %}
+
+{% block bottom_css %}
+{{ block.super }}
+<style>
+@media (min-width: 1400px) {  /* bootstrap xxl */
+
+}
+
+.topfbg {
+  background-image: url(/media/filer_public/05/68/0568de77-f6dd-4cb9-85c9-32f22c769a0a/img_6941.jpeg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 872px;
+  padding: 30px;
+}
+  
+  
+/* Generelle Styles für alle Geräte (Mobile First) */
+.jkc-container {
+    width: 100%; /* Volle Breite auf kleinen Geräten */
+    margin: 0;   /* Kein Rand auf kleinen Geräten */
+    box-sizing: border-box; /* Stellt sicher, dass padding und border in der Breite enthalten sind */
+    border: 2px dashed #570907;
+    border-radius: 10px;
+    padding: 10px;
+}
+
+/* Media Query für größere Bildschirme (ab 1201px) */
+@media (min-width: 1201px) {
+    .jkc-container {
+        width: 1200px; /* Feste Breite von 1200px */
+        margin-left: auto; /* Horizontale Zentrierung */
+        margin-right: auto; /* Horizontale Zentrierung */
+        margin-top: 30px;
+        margin-bottom: auto;        
+    }
+}
+body {
+  /* #C2685D to #570907 */
+  background: #C2685D;
+  background: radial-gradient(circle,rgba(194, 104, 93, 1) 0%, rgba(87, 9, 7, 1) 95%);
+}
+</style>
+{% endblock %}
+
+{% block content %}
+  <div class="jkc-container">
+      {% placeholder "content" %}
+  </div>
+      
+	<section id="frame">
+	  
+	</section>
+{% endblock content %}
+

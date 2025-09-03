@@ -11,7 +11,7 @@
 - `djangocms_frontend/templates/djangocms_frontend.html` [details](#djangocms_frontend-djangocms_frontendhtml)
 	- `djangocms_frontend/templates/bootstrap5/base.html` [details](#djangocms_frontend-bootstrap5basehtml)
 		- `djcms_jks/templates/jkc_base.html`
-			- `djcms_jks/templates/jkc_fullwidth.html`
+			- `djcms_jks/templates/jkc_fullwidth.html` (Startseite)
 		- `djcms_jks/templates/jkc_4_quadrate.html`
 	
 	
@@ -45,11 +45,29 @@ Beinhaltet die Haupt-HTML-Struktur mit Platzhalter für
 ## (djangocms_frontend) /bootstrap5/base.html
 
 Location: `/venvs/juliakarrieceramics_venv/lib/python3.11/site-packages/djangocms_frontend/templates/bootstrap5/`
-
-
+Overview:
+- CSS and JS files
+- Menu
 
 ### blocks
 Overriding:
-- base_css
-- base_js
-- navbar
+
+- `base_css` (injected `bootstrap.min.css`)
+- `base_js` (injected `bootstrap.bundle.min.js`)
+- `navbar`
+	- `navbar_options`
+	- `brand`
+	- `menubar`
+		- injected `show_menu`
+	- `searchbar` (empty)
+	
+## (djcms_jks) jkc_base.html
+- extends bootstrap5/base.html
+- extends `bottom_css` (block.super)  with custom background image
+
+## (djcms_jkc) jkc_fullwidth.html
+- extends jkc_base.html
+
+### blocks
+- `content`
+	- placeholder "content"
