@@ -1,7 +1,43 @@
 {% extends "jkc_base.html" %}
-{% load cms_tags %}
+{% load cms_tags menu_tags %}
+
+{% block menubar %}{% show_menu 0 0 1 1 'bootstrap5/menu.html' %}{% endblock %}
 
 {% block content %}
-        {% placeholder "content" %}
+<section class="jkc-fullwidth">
+  {% placeholder "content" %}
+</section>
 {% endblock content %}
 
+{% block bottom_css %}
+{{ block.super }}
+<style>
+  body {
+    background: #EFEBDC;
+    background: radial-gradient(circle,rgba(239, 235, 220, 1) 0%, rgba(255, 238, 237, 1) 95%);
+  }
+  
+  .jkc-fullwidth p {
+    /*font-family: monospace;*/
+  }
+  
+  .jkc-fullwidth h1, .jkc-fullwidth h2, .jkc-fullwidth h3 {
+    font-family: monospace;
+    margin-bottom: 2em;
+  }
+  
+  .nav-link {
+    font-size: 1.5em;
+    font-family: monospace;
+    padding-right: 20px !important;
+  }
+  
+  h1, h2, h3, h4, p {
+    background: linear-gradient(to right, #8C3310 0%, rgb(13, 13, 13) 46%, rgb(1, 1, 1) 50%, rgb(10, 10, 10) 53%, rgb(78, 78, 78) 76%, rgb(56, 56, 56) 87%, rgb(27, 27, 27) 100%) text;
+    -webkit-text-fill-color: transparent;
+    font-family: "Roboto";
+    font-weight: 100;
+  }
+  
+</style>
+{% endblock %}

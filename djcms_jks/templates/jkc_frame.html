@@ -1,5 +1,5 @@
 {% extends "jkc_base.html" %}
-{% load cms_tags %}
+{% load cms_tags menu_tags %}
 
 {% block navbar %}{% endblock %}
 
@@ -10,11 +10,17 @@
 
 }
 
+body {
+  /* #C2685D to #570907 */
+  background: #C2685D;
+  background: radial-gradient(circle,rgba(194, 104, 93, 1) 0%, rgba(87, 9, 7, 1) 95%);
+}
+
 .topfbg {
   background-image: url(/media/filer_public/05/68/0568de77-f6dd-4cb9-85c9-32f22c769a0a/img_6941.jpeg);
   background-repeat: no-repeat;
   background-size: cover;
-  height: 872px;
+  background-position: bottom right;
   padding: 30px;
 }
   
@@ -24,9 +30,55 @@
     width: 100%; /* Volle Breite auf kleinen Geräten */
     margin: 0;   /* Kein Rand auf kleinen Geräten */
     box-sizing: border-box; /* Stellt sicher, dass padding und border in der Breite enthalten sind */
-    border: 2px dashed #570907;
-    border-radius: 10px;
-    padding: 10px;
+    
+}
+
+.placeholder-logo p code {
+  font-size: 1em;
+  color: rgba(255, 255, 255, 1);
+  mix-blend-mode: overlay;
+  padding-left: 70px;
+  top: -40px;
+  position: relative;
+}
+
+.placeholder-content {
+
+}
+
+.placeholder-content code {
+  font-size: 1.5em;
+  color: rgba(255, 255, 255, 1);
+  mix-blend-mode: overlay;
+  display: block;
+  line-height: normal;
+  text-align: center;
+  
+}
+
+.placeholder-menu {
+  padding-top: 40px;
+}
+
+.placeholder-menu ul {
+  padding-left: 0;
+}
+
+.placeholder-menu ul li {
+  font-family: monospace;
+  font-size: 1.5em;
+  list-style: none;
+  text-align: center;
+  text-transform: uppercase;
+  padding-bottom: 1em;
+  line-height: 0.9em;
+  
+}
+
+.placeholder-menu ul li a, .placeholder-menu ul li a:link, .placeholder-menu ul li a:active, .placeholder-menu ul li a:hover {
+  color: rgba(87, 9, 7, 1);
+  mix-blend-mode: color-burn;
+  
 }
 
 /* Media Query für größere Bildschirme (ab 1201px) */
@@ -36,20 +88,69 @@
         margin-left: auto; /* Horizontale Zentrierung */
         margin-right: auto; /* Horizontale Zentrierung */
         margin-top: 30px;
-        margin-bottom: auto;        
+        margin-bottom: auto;     
+        border: 2px dashed #570907;
+        border-radius: 10px;
+        padding: 10px;   
+    }
+    
+    .topfbg {
+      background-size: cover;
+      background-position: initial;      
+      height: 872px;
+      padding: 30px;
+    }
+    
+    .placeholder-logo {
+      padding-top: 80px;
+    }
+    
+    .placeholder-logo p code {
+      padding-left: 175px;
+      font-size: 2em;
+    }
+    
+    .placeholder-logo img {
+      padding-top: 10px;
+      padding-left: 90px;
+    }
+    
+    .placeholder-content code {
+      font-size: 2em;
+      padding-left: 175px;
+      margin-top: 190px;
+      text-align: left;
+    }
+    
+    .placeholder-menu {
+      margin-top: 190px;
+    }
+    
+    .placeholder-menu ul li {
+      font-family: monospace;
+      font-size: 1.5em;
+      list-style: none;
+      text-align: center;
+      text-transform: uppercase;
+      padding-bottom: 1em;
+      line-height: normal;
     }
 }
-body {
-  /* #C2685D to #570907 */
-  background: #C2685D;
-  background: radial-gradient(circle,rgba(194, 104, 93, 1) 0%, rgba(87, 9, 7, 1) 95%);
-}
+
 </style>
 {% endblock %}
 
 {% block content %}
   <div class="jkc-container">
-      {% placeholder "content" %}
+    <div class="container-fluid topfbg">
+      <div class="row">
+        <div class="col col-12 placeholder-logo">{% placeholder "logo" %}</div>
+        <div class="col col-12 col-md-6 col-xxl-6 placeholder-content">{% placeholder "content" %}</div>
+        <div class="col col-12 col-md-6 col-xxl-6 placeholder-menu">
+          <ul>{% show_menu 0 0 1 1 'menu/menu.html' %}</ul>
+        </div>                        
+      </div>
+    </div>
   </div>
       
 	<section id="frame">

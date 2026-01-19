@@ -2,6 +2,18 @@
 {% load cms_tags menu_tags sekizai_tags %}
 <!-- ######## TEMPLATE: jkc_base.html ######## -->
 {% block title %}{{ block.super }} | Julia Karrié Ceramics{% endblock %}
+{% block meta %}
+  {{ block.super }}
+  <meta name="theme-color" content="#570907">
+{% endblock %}
+
+{% block page_head %}
+{{ block.super }}
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+{% endblock %}
+
 {% block bottom_css %}
 <!-- block bottom_css -->
 {{ block.super }}
@@ -23,5 +35,23 @@ h1, h2, h3, h4, p {
     color: #fff;
 }
 
+nav .navbar-brand img {
+  max-height: 3em;
+}
+
+
+.roboto-100 {
+  font-family: "Roboto", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 100;
+  font-style: normal;
+  font-variation-settings:
+    "wdth" 100;
+}
+
 </style>
+{% endblock %}
+
+{% block brand %}
+  <img src="/media/filer_public/42/cd/42cd8034-0836-41da-ba0e-52f9174485a3/signature_v2_inverted.png">
 {% endblock %}
