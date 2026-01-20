@@ -130,6 +130,7 @@ INSTALLED_APPS = [
     'djangocms_text_ckeditor',
     'djangocms_alias',
     'djangocms_versioning',
+    #'djangocms_link',  # requires 19 migrations, but is required for new djangocms_frontend
 
     'sekizai',
     'treebeard',
